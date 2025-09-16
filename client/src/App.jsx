@@ -7,26 +7,25 @@ import BuyCredit from './pages/BuyCredit'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Login from './components/Login'
 import { AppContext } from './context/AppContext'
 import Verify from './pages/Verify'
 
 const App = () => {
-
   const { showLogin } = useContext(AppContext)
 
   return (
-    <div className='px-4 sm:px-10 md:px-14 lg:px-28 min-h-screen bg-gradient-to-b from-teal-50 to-orange-50 '>
-      <ToastContainer position='bottom-right' />
+    <div className="px-6 sm:px-12 md:px-16 lg:px-32 min-h-screen bg-gradient-to-b from-slate-50 to-blue-50 ">
+      <ToastContainer position="bottom-right" />
       <Navbar />
       {showLogin && <Login />}
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/result' element={<Result />} />
-        <Route path='/buy' element={<BuyCredit />} />
-        <Route path='/verify' element={<Verify />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/buy" element={<BuyCredit />} />
+        <Route path="/verify" element={<Verify />} />
       </Routes>
       <Footer />
     </div>
